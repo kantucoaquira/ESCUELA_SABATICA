@@ -1,0 +1,335 @@
+/* Estilos generales para las páginas de administración */
+.page-container {
+    padding: 30px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+    color: var(--white-color);
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-icon {
+    font-size: 2.5rem;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-title p {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    background: var(--white-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--border-color);
+    background: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Estilos para las tarjetas de estadísticas */
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--white-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-left: 5px solid;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.total { border-color: var(--primary-color); }
+.stat-card.estudiantes { border-color: var(--success-color); }
+.stat-card.invitados { border-color: var(--warning-color); }
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--white-color);
+}
+
+.stat-card.total .stat-icon { background: var(--primary-color); }
+.stat-card.estudiantes .stat-icon { background: var(--success-color); }
+.stat-card.invitados .stat-icon { background: var(--warning-color); }
+
+.stat-info h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.stat-info p {
+    margin: 5px 0 0 0;
+    color: var(--text-color-light);
+    font-weight: 500;
+}
+
+/* Estilos para la sección de filtros y búsqueda */
+.filtros-section {
+    padding: 25px;
+}
+
+.filtros-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filtros-header h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filtros-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.search-section {
+    padding: 20px 25px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 12px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.25);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color-light);
+}
+
+/* Estilos para el calendario */
+.calendar-container {
+    background: var(--white-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calendar-navigation h3 {
+    margin: 0 15px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.today-btn {
+    margin-left: 20px;
+    padding: 8px 16px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.calendar-day-header {
+    background: #f8f9fa;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.calendar-day {
+    background: var(--white-color);
+    min-height: 120px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.calendar-day.other-month {
+    background: #f8f9fa;
+    color: var(--text-color-light);
+}
+
+.calendar-day.today {
+    background: #f0f9ff;
+    border: 2px solid var(--primary-color);
+}
+
+.calendar-date {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.calendar-sessions {
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+.calendar-session-item {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 4px 6px;
+    margin-bottom: 2px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calendar-session-item:hover {
+    background: var(--secondary-color);
+}
+
+.session-time {
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.session-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 10px;
+}
+
+.calendar-more-sessions {
+    font-size: 10px;
+    color: var(--text-color-light);
+    text-align: center;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.view-toggle {
+    display: flex;
+    background: #f3f4f6;
+    border-radius: 6px;
+    padding: 4px;
+    margin-right: 15px;
+}
+
+.btn-toggle {
+    background: transparent;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-color-light);
+    transition: all 0.2s;
+}
+
+.btn-toggle.active {
+    background: var(--white-color);
+    color: var(--primary-color);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
